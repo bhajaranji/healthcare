@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 Not Found</title>
+  <style>
+    body{
+      margin:0;
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      background:#0d1b2a;
+      font-family:Poppins, sans-serif;
+      color:white;
+      overflow:hidden;
+      text-align:center;
+    }
+
+    .num{
+      font-size:110px;
+      font-weight:800;
+      color:gold;
+      animation:float 3s ease-in-out infinite;
+      text-shadow:0 0 20px rgba(255,215,0,0.3);
+    }
+
+    @keyframes float{
+      0%{transform:translateY(0)}
+      50%{transform:translateY(-12px)}
+      100%{transform:translateY(0)}
+    }
+
+    p{
+      margin-top:10px;
+      font-size:18px;
+      opacity:0.9;
+    }
+
+    a{
+      margin-top:20px;
+      padding:12px 25px;
+      background:gold;
+      color:black;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    a:hover{
+      background:black;
+      color:gold;
+      border:1px solid gold;
+    }
+
+    /* small moving dots */
+    .dot{
+      position:absolute;
+      width:6px;
+      height:6px;
+      background:rgba(255,255,255,0.2);
+      border-radius:50%;
+      animation:move 6s linear infinite;
+    }
+
+    @keyframes move{
+      from{transform:translateY(100vh); opacity:0}
+      to{transform:translateY(-10vh); opacity:1}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="num">404</div>
+  <p>Oops! Page not found.</p>
+  <a href="index.html">Go Home</a>
+
+  <script>
+    for(let i=0;i<25;i++){
+      let d=document.createElement('div');
+      d.className='dot';
+      d.style.left=Math.random()*100+'%';
+      d.style.animationDuration=(4+Math.random()*3)+'s';
+      d.style.opacity=Math.random();
+      document.body.appendChild(d);
+    }
+  </script>
+
+</body>
+</html>

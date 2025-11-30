@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Health & Care — Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- LOGO (left) -->
+     <div class="site-logo" id="siteLogo">
+  <img src="assets/images/logo3.webp" alt="Health & Care Logo">
+</div>
+
+
+      <!-- NAV (centered visually) -->
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item dropdown">
+            <a href="index.html" class="dropdown-link" aria-expanded="false">Home ▾</a>
+            <ul class="dropdown-menu">
+           
+              <li><a href="home1.html">Home 2</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="#" class="dropdown-link" aria-expanded="false">Pages ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="blog.html">Blogs</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a href="doctors.html">Doctors</a></li>
+          <li class="nav-item"><a href="resources.html">Resources</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT SIDE: login button + hamburger (mobile only) -->
+      <div class="header-right">
+<button id="loginBtn" class="login-btn">Login</button>
+
+<script>
+  document.getElementById('loginBtn')?.addEventListener('click', function(e){
+    // change to the URL you want
+    window.location.href = 'login.html';
+    // if you want to open in a new tab instead, use:
+    // window.open('login.html', '_blank', 'noopener');
+  });
+</script>
+
+
+        <!-- hamburger (visible only on mobile) -->
+        <button id="hamburger" class="hamburger" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="hamburger-bars">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile menu">
+  <div class="mobile-menu-inner">
+
+    <div class="mobile-top">
+      <button id="mobile-close" class="mobile-close" aria-label="Close menu">✕</button>
+    
+    </div>
+
+    <ul class="mobile-nav-list">
+      <!-- NEW: Home dropdown -->
+      <li class="mobile-with-sub">
+        <button class="mobile-sub-toggle">Home ▾</button>
+        <ul class="mobile-submenu">
+    
+          <li><a href="home1.html">Home 2</a></li>
+        </ul>
+      </li>
+
+      <!-- Pages dropdown (already there) -->
+      <li class="mobile-with-sub">
+        <button class="mobile-sub-toggle">Pages ▾</button>
+        <ul class="mobile-submenu">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blogs</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </li>
+
+      <li><a href="doctors.html">Doctors</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="login.html" class="mobile-login">Login</a></li>
+    </ul>
+
+  </div>
+</div>
+</header>
+
+
+
+
+<!-- =========================
+   RESOURCES HERO
+   ========================= -->
+<section class="resources-hero">
+  <div class="container hero-row">
+    <div class="hero-left">
+      <h1>Resources & Guides</h1>
+      <p class="lead">
+        Downloadable guides, patient leaflets, infographics and research summaries — practical,
+        reliable resources to support your health decisions.
+      </p>
+      <div class="hero-actions">
+        <a href="404page.html" class="btn btn-primary">Browse Resources</a>
+        <a href="404page.html" class="btn btn-outline">Subscribe</a>
+      </div>
+    </div>
+
+    <div class="hero-right" aria-hidden="true">
+      <img src="assets/images/resources.webp" alt="Resources hero" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+   SEARCH + FILTER ROW
+   ========================= -->
+<section class="resources-controls container" aria-label="Search and filters">
+  
+</section>
+
+<!-- =========================
+   RESOURCES GRID + SIDEBAR
+   ========================= -->
+<section class="resources-body container" id="resources-grid">
+  <main class="resources-main">
+    <div class="res-grid" id="res-grid" aria-live="polite">
+      <!-- Resource card 1 -->
+      <article class="res-card" data-title="Knee Rehab Guide" data-category="guides" data-format="pdf" data-pop="1500">
+        <a class="res-thumb" href="404page.html">
+          <img src="assets/images/knee.webp" alt="Knee rehab guide cover" loading="lazy">
+        </a>
+
+        <div class="res-body">
+          <div class="res-meta">Guide • PDF • 12 pages</div>
+          <h3 class="res-title">Knee Rehabilitation — 12-step Home Program</h3>
+          <p class="res-excerpt">Step-by-step exercises and safety tips to support post-op recovery.</p>
+
+          <div class="res-actions">
+            <button class="btn btn-outline res-details" data-id="r1">Details</button>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- Resource card 2 -->
+      <article class="res-card" data-title="Sugar & Health" data-category="research" data-format="pdf" data-pop="980">
+        <a class="res-thumb" href="404page.html"><img src="assets/images/diabetic.webp" alt="Sugar research" loading="lazy"></a>
+        <div class="res-body">
+          <div class="res-meta">Research • PDF • 8 pages</div>
+          <h3 class="res-title">Understanding Sugar and Metabolism</h3>
+          <p class="res-excerpt">A short literature summary explaining sugar types, metabolism and recommendations.</p>
+          <div class="res-actions">
+            <button class="btn btn-outline res-details" data-id="r2">Details</button>
+ 
+          </div>
+        </div>
+      </article>
+
+      <!-- Resource card 3 -->
+      <article class="res-card" data-title="Healthy Meal Plan" data-category="guides" data-format="pdf" data-pop="2100">
+        <a class="res-thumb" href="404page.html"><img src="assets/images/7day.webp" alt="Meal plan" loading="lazy"></a>
+        <div class="res-body">
+          <div class="res-meta">Guide • PDF • 6 pages</div>
+          <h3 class="res-title">7-Day Healthy Meal Plan</h3>
+          <p class="res-excerpt">Balanced meals for energy and weight management — printable shopping list included.</p>
+          <div class="res-actions">
+            <button class="btn btn-outline res-details" data-id="r3">Details</button>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- Resource card 4 -->
+      <article class="res-card" data-title="Telehealth Tips" data-category="infographics" data-format="pdf" data-pop="640">
+        <a class="res-thumb" href="404page.html"><img src="assets/images/teli.webp" alt="Telehealth tips" loading="lazy"></a>
+        <div class="res-body">
+          <div class="res-meta">Infographic • PDF</div>
+          <h3 class="res-title">Preparing for a Teleconsult</h3>
+          <p class="res-excerpt">Quick checklist to get the most from your online consultation.</p>
+          <div class="res-actions">
+            <button class="btn btn-outline res-details" data-id="r4">Details</button>
+     
+          </div>
+        </div>
+      </article>
+
+      <!-- Resource card 5 -->
+      <article class="res-card" data-title="Back Pain Stretches" data-category="guides" data-format="video" data-pop="3200">
+        <a class="res-thumb" href="404page.html"><img src="assets/images/backpain.webp" alt="Back stretches" loading="lazy"></a>
+        <div class="res-body">
+          <div class="res-meta">Video • 8 min</div>
+          <h3 class="res-title">Quick Back Pain Relief Stretches</h3>
+          <p class="res-excerpt">A short guided video you can follow at your desk or home.</p>
+          <div class="res-actions">
+            <button class="btn btn-outline res-details" data-id="r5">Details</button>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- Resource card 6 -->
+      <article class="res-card" data-title="Consent Form" data-category="forms" data-format="pdf" data-pop="420">
+        <a class="res-thumb" href="404page.html"><img src="assets/images/clinicform.webp" alt="Consent form" loading="lazy"></a>
+        <div class="res-body">
+          <div class="res-meta">Form • PDF</div>
+          <h3 class="res-title">Clinic Consent & Registration Form</h3>
+          <p class="res-excerpt">Printable consent form for new patients — fill and bring to your visit.</p>
+          <div class="res-actions">
+            <button class="btn btn-outline res-details" data-id="r6">Details</button>
+
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- pagination -->
+    <div class="res-pagination" role="navigation" aria-label="Resources pages">
+     
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="resources-sidebar" aria-label="Resources sidebar">
+    <div class="widget widget-popular">
+      <h4>Popular Resources</h4>
+      <ul>
+        <li><a href="404page.html">Quick Back Stretches (Video)</a></li>
+        <li><a href="404page.html">7-Day Meal Plan (PDF)</a></li>
+        <li><a href="404page.html">Knee Rehab Guide (PDF)</a></li>
+      </ul>
+    </div>
+
+    <div class="widget widget-tags">
+      <h4>Tags</h4>
+      <div class="tag-cloud">
+        <button class="tag-btn" data-filter="guides">Guides</button>
+        <button class="tag-btn" data-filter="infographics">Infographics</button>
+        <button class="tag-btn" data-filter="research">Research</button>
+        <button class="tag-btn" data-filter="forms">Forms</button>
+        <button class="tag-btn" data-filter="video">Video</button>
+      </div>
+    </div>
+
+    <div class="widget widget-newsletter" id="newsletter">
+      <h4>Subscribe</h4>
+      <p>Get new resources delivered to your inbox.</p>
+      <form id="res-newsletter" action="#" onsubmit="return false;">
+        <label class="sr-only" for="res-email">Email</label>
+        <input id="res-email" type="email" placeholder="Your email" required>
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </aside>
+</section>
+
+<!-- =========================
+   RESOURCE DETAILS MODAL
+   ========================= -->
+<div id="res-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="res-modal-title">
+  <div class="modal-backdrop" data-close="true"></div>
+  <div class="modal-panel" role="document">
+    <button class="modal-close" aria-label="Close" data-close="true">✕</button>
+
+    <div class="modal-content">
+      <div class="modal-thumb"><img src="assets/images/backpain.webp" alt="" id="rm-thumb"></div>
+      <div class="modal-right">
+        <h3 id="res-modal-title">Resource title</h3>
+        <div id="res-modal-meta" class="res-meta">Type • Format</div>
+        <p id="res-modal-desc" class="res-desc">Full description and notes about the resource.</p>
+
+        <div class="modal-actions">
+          <a id="rm-download" class="btn btn-primary" href="404page.html" download>Download / Open</a>
+          <a class="btn btn-outline" id="rm-more" href="404page.html">View on site</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- =========================
+     FOOTER (Health & Care)
+     ========================= -->
+<footer class="hc-footer" role="contentinfo">
+  <div class="hc-footer-inner">
+
+    <!-- LEFT: logo + desc -->
+    <div class="hc-col hc-col-about">
+<img src="assets/images/logo3.webp" alt="">
+      <div class="hc-logo-wrap">
+    
+      </div>
+
+      <p class="hc-desc">
+        Health & Care is committed to delivering compassionate, modern healthcare.
+        From routine checkups to advanced diagnostics, our team of trusted professionals
+        combines clinical expertise with technology to help you stay healthy and empowered.
+      </p>
+    </div>
+
+    <!-- MIDDLE: quick links -->
+    <div class="hc-col hc-col-links">
+      <h4 class="hc-title">Quick Links</h4>
+      <ul class="hc-links-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- RIGHT: services / subscribe -->
+    <div class="hc-col hc-col-subscribe">
+      <h4 class="hc-title">Our Services</h4>
+      <ul class="hc-services-list">
+        <li><a href="404page.html">General Checkups</a></li>
+        <li><a href="404page.html">Cardiology</a></li>
+        <li><a href="404page.html">Dental Care</a></li>
+        <li><a href="404page.html">Dermatology</a></li>
+        <li><a href="404page.html">Teleconsultation</a></li>
+      </ul>
+
+      <div class="hc-newsletter">
+        <label for="hc-email" class="sr-only">Subscribe to newsletter</label>
+        <input id="hc-email" type="email" placeholder="Enter your email" />
+           <p id="newsletterError" style="color:#ff4b4b; font-size:14px; margin-top:6px; display:none;">
+  Fill the credentials
+</p>
+        <button class="hc-send" aria-label="Subscribe">➤</button>
+     
+
+      </div>
+
+      <div class="hc-social">
+        <div class="hc-social">
+  <a href="404page.html" aria-label="Facebook" class="hc-social-btn">
+    <!-- Facebook SVG -->
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M22 12.07C22 6.54 17.52 2 12 2S2 6.54 2 12.07c0 5.03 3.66 9.19 8.44 9.93v-7.03h-2.54v-2.9h2.54V9.41c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.9h-2.34v7.03C18.34 21.26 22 17.1 22 12.07z"/>
+    </svg>
+  </a>
+
+  <a href="404page.html" aria-label="Twitter" class="hc-social-btn">
+    <!-- Twitter / X SVG -->
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.23 2H22l-8.09 9.19L22 22h-7.03l-5.08-6.46L4.26 22H2l8.66-9.83L2 2h7.03l4.66 5.86L18.23 2z"/>
+    </svg>
+  </a>
+
+  <a href="404page.html" aria-label="Instagram" class="hc-social-btn">
+    <!-- Instagram SVG -->
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm6.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/>
+    </svg>
+  </a>
+
+  <a href="404page.html" aria-label="LinkedIn" class="hc-social-btn">
+    <!-- LinkedIn SVG -->
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h4v2.2h.06c.56-1.06 1.96-2.2 4.04-2.2C21.44 8 24 10.12 24 14.44V24h-4v-8.6c0-2.06-.04-4.72-2.88-4.72-2.88 0-3.32 2.24-3.32 4.56V24h-4V8z"/>
+    </svg>
+  </a>
+</div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="hc-footer-bottom">
+    <div class="hc-copy">© <span id="year"></span> Health & Care. All rights reserved.</div>
+  </div>
+</footer>
+
+
+    
+
+<script src="app.js"></script>
+</body>
+</html>
+
+
+<script>
+(function(){
+  const search = document.getElementById('res-search');
+  const clearBtn = document.getElementById('res-clear');
+  const catSel = document.getElementById('res-category');
+  const fmtSel = document.getElementById('res-format');
+  const sortSel = document.getElementById('res-sort');
+  const grid = document.getElementById('res-grid');
+  const cards = Array.from(grid.querySelectorAll('.res-card'));
+
+  // Pagination simple
+  const prevBtn = document.querySelector('.res-pagination .prev');
+  const nextBtn = document.querySelector('.res-pagination .next');
+  const pageInfo = document.querySelector('.res-pagination .page-info');
+  const perPage = 6;
+  let currentPage = 1;
+  let filtered = cards.slice();
+
+  function formatNum(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,","); }
+
+  function applyFilters() {
+    const q = (search.value || '').trim().toLowerCase();
+    const cat = (catSel.value || 'all');
+    const fmt = (fmtSel.value || 'all');
+    const sort = (sortSel.value || 'newest');
+
+    filtered = cards.filter(card => {
+      const title = (card.dataset.title || '').toLowerCase();
+      const c = (card.dataset.category || '').toLowerCase();
+      const f = (card.dataset.format || '').toLowerCase();
+      const matchesQ = !q || title.includes(q);
+      const matchesCat = cat === 'all' || c === cat;
+      const matchesFmt = fmt === 'all' || f === fmt;
+      return matchesQ && matchesCat && matchesFmt;
+    });
+
+    // sort
+    if(sort === 'popular') {
+      filtered.sort((a,b)=> (Number(b.dataset.pop||0) - Number(a.dataset.pop||0)));
+    } else if(sort === 'alphabet') {
+      filtered.sort((a,b)=> (a.dataset.title.localeCompare(b.dataset.title)));
+    } // newest left as-is (DOM order)
+
+    currentPage = 1;
+    renderPage();
+  }
+
+  function renderPage() {
+    cards.forEach(c => c.style.display = 'none');
+    const total = Math.max(1, Math.ceil(filtered.length / perPage));
+    const start = (currentPage-1)*perPage;
+    const pageItems = filtered.slice(start, start+perPage);
+    pageItems.forEach(p => p.style.display = '');
+    pageInfo && (pageInfo.textContent = currentPage + ' / ' + total);
+    prevBtn && (prevBtn.disabled = currentPage <= 1);
+    nextBtn && (nextBtn.disabled = currentPage >= total);
+  }
+
+  // events
+  search && search.addEventListener('input', applyFilters);
+  clearBtn && clearBtn.addEventListener('click', ()=>{ search.value=''; applyFilters(); search.focus(); });
+  catSel && catSel.addEventListener('change', applyFilters);
+  fmtSel && fmtSel.addEventListener('change', applyFilters);
+  sortSel && sortSel.addEventListener('change', applyFilters);
+  prevBtn && prevBtn.addEventListener('click', ()=>{ if(currentPage>1){ currentPage--; renderPage(); }});
+  nextBtn && nextBtn.addEventListener('click', ()=>{ const total = Math.ceil(filtered.length/perPage); if(currentPage<total){ currentPage++; renderPage(); }});
+
+  // init
+  applyFilters();
+
+  /* ---------- MODAL: resource details ---------- */
+  const modal = document.getElementById('res-modal');
+  const rmThumb = document.getElementById('rm-thumb');
+  const rmTitle = document.getElementById('res-modal-title');
+  const rmMeta = document.getElementById('res-modal-meta');
+  const rmDesc = document.getElementById('res-modal-desc');
+  const rmDownload = document.getElementById('rm-download');
+  const rmMore = document.getElementById('rm-more');
+
+  const detailBtns = Array.from(document.querySelectorAll('.res-details'));
+  detailBtns.forEach(btn => btn.addEventListener('click', () => {
+    const card = btn.closest('.res-card');
+    if(!card) return;
+    const img = card.querySelector('.res-thumb img').src;
+    const title = card.dataset.title || '';
+    const meta = card.querySelector('.res-meta')?.innerText || '';
+    const excerpt = card.querySelector('.res-excerpt')?.innerText || '';
+    const downloadLink = card.querySelector('.res-download')?.href || '#';
+
+    rmThumb.src = img;
+    rmThumb.alt = title;
+    rmTitle.textContent = title;
+    rmMeta.textContent = meta;
+    rmDesc.textContent = excerpt + ' — download or view the full resource.';
+    rmDownload.href = downloadLink;
+    rmMore.href = downloadLink;
+
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }));
+
+  // close modal
+  modal.querySelectorAll('[data-close]').forEach(btn => btn.addEventListener('click', ()=> {
+    modal.setAttribute('aria-hidden','true'); document.body.style.overflow = '';
+  }));
+  document.addEventListener('keydown', (e)=> { if(e.key === 'Escape') { modal.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; } });
+
+  // newsletter demo submit (redirects to 404)
+  const nl = document.getElementById('res-newsletter');
+  if (nl) nl.addEventListener('submit', (e)=> {
+    e.preventDefault();
+    const email = document.getElementById('res-email').value;
+    if (email) {
+      alert('Thanks — subscribed: ' + email);
+      window.location.href = "404page.html";
+    }
+  });
+
+  // Make all resource download links redirect to 404 instead of downloading
+  document.querySelectorAll('.res-download').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault(); // stop the default download/open
+      // redirect to 404 page
+      window.location.href = "404page.html";
+    });
+  });
+
+  // ===== ADDED: Force modal buttons to redirect to 404 (even if rmDownload.href is set) =====
+  if (rmDownload) {
+    rmDownload.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location.href = "404page.html";
+    });
+  }
+  if (rmMore) {
+    rmMore.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location.href = "404page.html";
+    });
+  }
+
+  // tag buttons
+  document.querySelectorAll('.tag-btn').forEach(b => {
+    b.addEventListener('click', ()=> {
+      catSel.value = b.getAttribute('data-filter') || 'all';
+      applyFilters();
+      window.scrollTo({top: document.getElementById('resources-grid').offsetTop - 80, behavior:'smooth'});
+    });
+  });
+
+})();
+</script>
+
+    
+
+<script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
